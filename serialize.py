@@ -56,7 +56,7 @@ class TypePickle(Serialization):
 def serialize(dat):
     if not isinstance(dat, Serialization):
         raise TypeError('Is not Serialization!')
-    print('Data saved!')
+    print('Is True!')
 
 
 test = {'name': 'Sasha', 'phone': ['0991831411', '0509934058'], 'age': 20}
