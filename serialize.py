@@ -17,7 +17,7 @@ class Serialization(metaclass=ABCMeta):
         pass
 
 
-class TypeJson(Serialization):
+class SerializeJson(Serialization):
 
     def save(self):
         """
@@ -35,7 +35,7 @@ class TypeJson(Serialization):
             print(restore_data)
 
 
-class TypePickle(Serialization):
+class SerializePickle(Serialization):
 
     def save(self):
         """
@@ -61,11 +61,11 @@ def serialize(dat):
 
 test = {'name': 'Sasha', 'phone': ['0991831411', '0509934058'], 'age': 20}
 
-j = TypeJson(test, 'saved.json')
+j = SerializeJson(test, 'saved.json')
 j.save()
 j.load()
 
-p = TypePickle(test, 'saved.bin')
+p = SerializePickle(test, 'saved.bin')
 p.save()
 p.load()
 
